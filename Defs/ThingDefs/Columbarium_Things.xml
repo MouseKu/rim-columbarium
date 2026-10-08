@@ -96,7 +96,7 @@
     </costList>
     <statBases>
       <WorkToBuild>4800</WorkToBuild>
-      <MaxHitPoints>600</MaxHitPoints>
+      <MaxHitPoints>500</MaxHitPoints>
       <Beauty>0</Beauty>
       <Flammability>0</Flammability>
     </statBases>

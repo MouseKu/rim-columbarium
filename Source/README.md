@@ -19,6 +19,10 @@ Run `scripts/build.ps1` from the repository root after changing C# or XML.
 5. `Building_Columbarium.cs` draws occupied niches and flowers. The same storage
    methods save the urns and return them when removed or the building is destroyed.
 
+`JoyGiver_VisitColumbarium.cs` selects a columbarium with stored memorials.
+`JobDriver_VisitColumbarium.cs` inherits the vanilla joy visit path and wait toils,
+then applies the vanilla grave room joy factor to the columbarium target.
+
 ## Where to change behavior
 
 | Goal | Files |
@@ -29,7 +33,7 @@ Run `scripts/build.ps1` from the repository root after changing C# or XML.
 | Change niche fill order or drawing | `Building_Columbarium.cs` |
 | Change flower selection | `FlowerCatalog.cs` |
 | Change flower placement | `NicheFlowerLayout.cs`, `CompactNicheFlowerLayout.cs`, `ThirtyTwoLayout.cs`, `CompactThirtyTwoFlowerLayout.cs` |
-| Change construction rotation or memorial visits | `Designator_BuildColumbarium.cs`, `JoyGiver_VisitColumbarium.cs` |
+| Change construction rotation or memorial visits | `Designator_BuildColumbarium.cs`, `JoyGiver_VisitColumbarium.cs`, `JobDriver_VisitColumbarium.cs` |
 | Change urn pricing or Tomb room score | `StatPart_MemorialUrnMarketValue.cs`, `MemorialUrnMarketValueRegistration.cs`, `TombRoomRoleHarmonyPatch.cs` |
 
 `Building_Columbarium` is split across two partial files: the main file handles
