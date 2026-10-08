@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ColumbariumThirtyTwoCompact</defName>
+    <label>columbarium (32 niches, 4x2)</label>
+    <description>A thirty-two-niche columbarium on a 4 by 2 footprint. Each sealed niche displays a memorial plaque and flower.</description>
+    <thingClass>Columbarium.Building_Columbarium</thingClass>
+    <graphicData>
+      <texPath>Things/Columbarium_Art32OutlineCompact</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.05191884,3.01037395)</drawSize>
+    </graphicData>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(4,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>480</costStuffCount>
+    <costList>
+      <Steel>32</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>9600</WorkToBuild>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ColumbariumThirtyTwoLarge</defName>
+    <label>columbarium (32 niches, 8x4)</label>
+    <description>A thirty-two-niche columbarium on a 8 by 4 footprint. Each sealed niche displays a memorial plaque and flower.</description>
+    <thingClass>Columbarium.Building_Columbarium</thingClass>
+    <graphicData>
+      <texPath>Things/Columbarium_Art32Outline</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(8.16554203,5.98881435)</drawSize>
+    </graphicData>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(8,4)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>480</costStuffCount>
+    <costList>
+      <Steel>32</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>9600</WorkToBuild>
+      <MaxHitPoints>800</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>

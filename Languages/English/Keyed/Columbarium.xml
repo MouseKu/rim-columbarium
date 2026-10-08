@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Columbarium_MemorialRecordTitle>Memorial record</Columbarium_MemorialRecordTitle>
+  <Columbarium_MemorialRecord>Memorial record</Columbarium_MemorialRecord>
+  <Columbarium_MemorialRecordDesc>View the memorial record.</Columbarium_MemorialRecordDesc>
+  <Columbarium_MemorialRecords>Memorial records</Columbarium_MemorialRecords>
+  <Columbarium_EngraveEpitaph>Engrave epitaph</Columbarium_EngraveEpitaph>
+  <Columbarium_EpitaphCannotChange>An epitaph cannot be changed after it has been engraved.</Columbarium_EpitaphCannotChange>
+  <Columbarium_Finish>Finish</Columbarium_Finish>
+  <Columbarium_Cancel>Cancel</Columbarium_Cancel>
+  <Columbarium_MemorialFlower>Memorial flower: {0} ({1})</Columbarium_MemorialFlower>
+  <Columbarium_UnknownDate>????, quadrum ?, day ?</Columbarium_UnknownDate>
+  <Columbarium_Died>Died: {0}</Columbarium_Died>
+  <Columbarium_StoreUrn>Store urn</Columbarium_StoreUrn>
+  <Columbarium_StoreUrnDesc>Choose a memorial urn to haul here.</Columbarium_StoreUrnDesc>
+  <Columbarium_RemoveUrn>Remove urn</Columbarium_RemoveUrn>
+  <Columbarium_NoSpaceNearBuilding>No space is available near the columbarium. The urn remains stored.</Columbarium_NoSpaceNearBuilding>
+  <Columbarium_NoAvailableUrns>No available memorial urns</Columbarium_NoAvailableUrns>
+  <Columbarium_NoColonistCanHaulUrn>No colonist can haul that urn.</Columbarium_NoColonistCanHaulUrn>
+  <Columbarium_UrnsStored>Urns: {0}/{1}</Columbarium_UrnsStored>
+  <Columbarium_RemainsOf>Remains of: {0}</Columbarium_RemainsOf>
+  <Columbarium_Flower_Melee>Gladiolus</Columbarium_Flower_Melee>
+  <Columbarium_Flower_Shooting>Gentian</Columbarium_Flower_Shooting>
+  <Columbarium_Flower_Construction>Forget-me-not</Columbarium_Flower_Construction>
+  <Columbarium_Flower_Mining>Black hellebore</Columbarium_Flower_Mining>
+  <Columbarium_Flower_Cooking>Alstroemeria</Columbarium_Flower_Cooking>
+  <Columbarium_Flower_Plants>Clover</Columbarium_Flower_Plants>
+  <Columbarium_Flower_Animals>Sunflower</Columbarium_Flower_Animals>
+  <Columbarium_Flower_Crafting>Cornflower</Columbarium_Flower_Crafting>
+  <Columbarium_Flower_Artistic>Dahlia</Columbarium_Flower_Artistic>
+  <Columbarium_Flower_Medicine>Lily</Columbarium_Flower_Medicine>
+  <Columbarium_Flower_Social>Rose</Columbarium_Flower_Social>
+  <Columbarium_Flower_Intellectual>Iris</Columbarium_Flower_Intellectual>
+</LanguageData>

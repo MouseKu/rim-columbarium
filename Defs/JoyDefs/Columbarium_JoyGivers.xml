@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JoyGiverDef>
+    <defName>ColumbariumVisitMemorial</defName>
+    <giverClass>Columbarium.JoyGiver_VisitColumbarium</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>ColumbariumVisitMemorial</jobDef>
+    <joyKind>Meditative</joyKind>
+    <thingDefs>
+      <li>ColumbariumModularCompactTall</li>
+      <li>ColumbariumModularTall</li>
+      <li>ColumbariumThirtyTwoCompact</li>
+      <li>ColumbariumThirtyTwoLarge</li>
+    </thingDefs>
+  </JoyGiverDef>
+</Defs>

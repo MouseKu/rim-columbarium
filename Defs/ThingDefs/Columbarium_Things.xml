@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>ColumbariumEmptyUrn</defName>
+    <label>empty urn</label>
+    <description>An unfilled memorial urn, ready for a colonist's ashes.</description>
+    <thingClass>Columbarium.Urn</thingClass>
+    <graphicData>
+      <texPath>Things/Urn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MarketValue>25</MarketValue>
+      <Mass>1</Mass>
+      <Beauty>2</Beauty>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>180</MaxHitPoints>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ColumbariumUrnDisplay</defName>
+    <label>memorial urn</label>
+    <description>A memorial urn containing the ashes and record of a colonist. It can be installed, uninstalled, and moved like a sculpture.</description>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+    <thingClass>Columbarium.Building_MemorialUrnDisplay</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <graphicData>
+      <texPath>Things/UrnWriting</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.2,1.2)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.35</fillPercent>
+    <pathCost>30</pathCost>
+    <building>
+      <isInert>true</isInert>
+    </building>
+    <statBases>
+      <WorkToBuild>300</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Mass>1</Mass>
+      <Beauty>4</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ColumbariumModularCompactTall</defName>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <label>columbarium (8 niches, compact)</label>
+    <description>An eight-niche columbarium on a two-by-one footprint.</description>
+    <thingClass>Columbarium.Building_Columbarium</thingClass>
+    <graphicData>
+      <texPath>Things/Columbarium_ArtTallCompact</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2.07918782,1.54109749)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(2,1)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <costList>
+      <Steel>8</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>4800</WorkToBuild>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>ColumbariumModularTall</defName>
+    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <label>columbarium (8 niches)</label>
+    <description>An eight-niche columbarium on a four-by-two footprint.</description>
+    <thingClass>Columbarium.Building_Columbarium</thingClass>
+    <graphicData>
+      <texPath>Things/Columbarium_ArtTall</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.15837563,3.01781746)</drawSize>
+    </graphicData>
+    <drawerType>RealtimeOnly</drawerType>
+    <size>(4,2)</size>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <designationCategory>Misc</designationCategory>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <costList>
+      <Steel>8</Steel>
+    </costList>
+    <statBases>
+      <WorkToBuild>4800</WorkToBuild>
+      <MaxHitPoints>600</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <Flammability>0</Flammability>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <blockWind>true</blockWind>
+    <blockLight>true</blockLight>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+  </ThingDef>
+</Defs>

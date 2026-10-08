@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ColumbariumMakeUrn.label>빈 유골함 제작</ColumbariumMakeUrn.label>
+  <ColumbariumMakeUrn.description>고인의 유해를 담을 빈 유골함을 만듭니다.</ColumbariumMakeUrn.description>
+  <ColumbariumMakeUrn.jobString>유골함을 제작하는 중</ColumbariumMakeUrn.jobString>
+  <ColumbariumFillUrn.label>고인을 화장해 유골함에 안치</ColumbariumFillUrn.label>
+  <ColumbariumFillUrn.description>고인을 화장하고 납골당에 보관하거나 설치할 수 있는 추모 유골함을 만듭니다.</ColumbariumFillUrn.description>
+  <ColumbariumFillUrn.jobString>고인을 화장하는 중</ColumbariumFillUrn.jobString>
+</LanguageData>

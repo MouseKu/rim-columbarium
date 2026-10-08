@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Columbarium_MemorialRecordTitle>추모 기록</Columbarium_MemorialRecordTitle>
+  <Columbarium_MemorialRecord>추모 기록</Columbarium_MemorialRecord>
+  <Columbarium_MemorialRecordDesc>고인의 추모 기록을 봅니다.</Columbarium_MemorialRecordDesc>
+  <Columbarium_MemorialRecords>추모 기록 보기</Columbarium_MemorialRecords>
+  <Columbarium_EngraveEpitaph>묘비명 새기기</Columbarium_EngraveEpitaph>
+  <Columbarium_EpitaphCannotChange>한 번 새긴 묘비명은 바꿀 수 없습니다.</Columbarium_EpitaphCannotChange>
+  <Columbarium_Finish>완료</Columbarium_Finish>
+  <Columbarium_Cancel>취소</Columbarium_Cancel>
+  <Columbarium_MemorialFlower>추모 꽃: {0} ({1})</Columbarium_MemorialFlower>
+  <Columbarium_UnknownDate>????년 ? 분기 ? 일</Columbarium_UnknownDate>
+  <Columbarium_Died>사망: {0}</Columbarium_Died>
+  <Columbarium_StoreUrn>유골함 안치</Columbarium_StoreUrn>
+  <Columbarium_StoreUrnDesc>이 납골당으로 옮길 추모 유골함을 선택합니다.</Columbarium_StoreUrnDesc>
+  <Columbarium_RemoveUrn>유골함 꺼내기</Columbarium_RemoveUrn>
+  <Columbarium_NoSpaceNearBuilding>납골당 주변에 유골함을 놓을 공간이 없습니다. 유골함은 계속 안치되어 있습니다.</Columbarium_NoSpaceNearBuilding>
+  <Columbarium_NoAvailableUrns>안치할 수 있는 추모 유골함이 없습니다.</Columbarium_NoAvailableUrns>
+  <Columbarium_NoColonistCanHaulUrn>유골함을 운반할 정착민이 없습니다.</Columbarium_NoColonistCanHaulUrn>
+  <Columbarium_UrnsStored>안치된 유골함: {0}/{1}</Columbarium_UrnsStored>
+  <Columbarium_RemainsOf>고인: {0}</Columbarium_RemainsOf>
+  <Columbarium_Flower_Melee>글라디올러스</Columbarium_Flower_Melee>
+  <Columbarium_Flower_Shooting>용담</Columbarium_Flower_Shooting>
+  <Columbarium_Flower_Construction>물망초</Columbarium_Flower_Construction>
+  <Columbarium_Flower_Mining>검은 헬레보루스</Columbarium_Flower_Mining>
+  <Columbarium_Flower_Cooking>알스트로메리아</Columbarium_Flower_Cooking>
+  <Columbarium_Flower_Plants>토끼풀</Columbarium_Flower_Plants>
+  <Columbarium_Flower_Animals>해바라기</Columbarium_Flower_Animals>
+  <Columbarium_Flower_Crafting>수레국화</Columbarium_Flower_Crafting>
+  <Columbarium_Flower_Artistic>달리아</Columbarium_Flower_Artistic>
+  <Columbarium_Flower_Medicine>백합</Columbarium_Flower_Medicine>
+  <Columbarium_Flower_Social>장미</Columbarium_Flower_Social>
+  <Columbarium_Flower_Intellectual>붓꽃</Columbarium_Flower_Intellectual>
+</LanguageData>

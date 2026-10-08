@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/DesignationCategoryDef[defName="Misc"]/specialDesignatorClasses</xpath>
+    <value>
+      <li>Columbarium.Designator_BuildEightCompact</li>
+      <li>Columbarium.Designator_BuildEight</li>
+      <li>Columbarium.Designator_BuildThirtyTwoCompact</li>
+      <li>Columbarium.Designator_BuildThirtyTwoLarge</li>
+    </value>
+  </Operation>
+</Patch>

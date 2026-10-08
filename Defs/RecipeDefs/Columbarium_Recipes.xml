@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <RecipeDef>
+    <defName>ColumbariumMakeUrn</defName>
+    <label>make empty urn</label>
+    <description>Make an empty urn for a colonist's ashes.</description>
+    <jobString>Making an urn.</jobString>
+    <workAmount>800</workAmount>
+    <workSkill>Artistic</workSkill>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <productHasIngredientStuff>true</productHasIngredientStuff>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+            <li>Silver</li>
+            <li>Gold</li>
+            <li>Uranium</li>
+            <li>Plasteel</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+            <li>BlocksSandstone</li>
+            <li>BlocksGranite</li>
+            <li>BlocksLimestone</li>
+            <li>BlocksSlate</li>
+            <li>BlocksMarble</li>
+            <li MayRequire="Ludeon.RimWorld.Odyssey">BlocksVacstone</li>
+            <li>Jade</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Dye</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+        <li>Steel</li>
+        <li>Silver</li>
+        <li>Gold</li>
+        <li>Uranium</li>
+        <li>Plasteel</li>
+        <li MayRequire="Ludeon.RimWorld.Anomaly">Bioferrite</li>
+        <li>BlocksSandstone</li>
+        <li>BlocksGranite</li>
+        <li>BlocksLimestone</li>
+        <li>BlocksSlate</li>
+        <li>BlocksMarble</li>
+        <li MayRequire="Ludeon.RimWorld.Odyssey">BlocksVacstone</li>
+        <li>Jade</li>
+        <li>Dye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ColumbariumEmptyUrn>1</ColumbariumEmptyUrn>
+    </products>
+    <recipeUsers>
+      <li>TableSculpting</li>
+    </recipeUsers>
+  </RecipeDef>
+  <RecipeDef>
+    <defName>ColumbariumFillUrn</defName>
+    <workerClass>Columbarium.RecipeWorker_FillUrn</workerClass>
+    <label>cremate colonist into urn</label>
+    <description>Cremate a colonist's corpse and produce an installable memorial urn that can also be stored in a columbarium.</description>
+    <jobString>Cremating a colonist.</jobString>
+    <workAmount>250</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <autoStripCorpses>false</autoStripCorpses>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ColumbariumEmptyUrn</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ColumbariumEmptyUrn</li>
+      </thingDefs>
+      <categories>
+        <li>CorpsesHumanlike</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>ColumbariumEmptyUrn</li>
+      </thingDefs>
+      <categories>
+        <li>CorpsesHumanlike</li>
+      </categories>
+      <specialFiltersToAllow>
+        <li>AllowCorpsesColonist</li>
+      </specialFiltersToAllow>
+    </defaultIngredientFilter>
+    <products>
+      <ColumbariumUrnDisplay>1</ColumbariumUrnDisplay>
+    </products>
+    <recipeUsers>
+      <li>ElectricCrematorium</li>
+    </recipeUsers>
+  </RecipeDef>
+</Defs>

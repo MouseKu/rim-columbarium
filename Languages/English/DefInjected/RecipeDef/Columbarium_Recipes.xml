@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ColumbariumMakeUrn.label>make empty urn</ColumbariumMakeUrn.label>
+  <ColumbariumMakeUrn.description>Make an empty urn for a colonist's remains.</ColumbariumMakeUrn.description>
+  <ColumbariumMakeUrn.jobString>Making an urn.</ColumbariumMakeUrn.jobString>
+  <ColumbariumFillUrn.label>cremate colonist into urn</ColumbariumFillUrn.label>
+  <ColumbariumFillUrn.description>Cremate a colonist and produce an installable memorial urn that can also be stored in a columbarium.</ColumbariumFillUrn.description>
+  <ColumbariumFillUrn.jobString>Cremating a colonist.</ColumbariumFillUrn.jobString>
+</LanguageData>

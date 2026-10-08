@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <JobDef>
+    <defName>ColumbariumStoreUrn</defName>
+    <driverClass>Columbarium.JobDriver_StoreUrn</driverClass>
+    <reportString>Storing urn in columbarium.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>ColumbariumVisitMemorial</defName>
+    <driverClass>JobDriver_VisitGrave</driverClass>
+    <reportString>visiting memorial urns.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyKind>Meditative</joyKind>
+  </JobDef>
+</Defs>

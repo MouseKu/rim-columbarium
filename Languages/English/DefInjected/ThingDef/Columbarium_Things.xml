@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <ColumbariumEmptyUrn.label>empty urn</ColumbariumEmptyUrn.label>
+  <ColumbariumEmptyUrn.description>An empty urn, ready to hold a colonist's remains.</ColumbariumEmptyUrn.description>
+  <ColumbariumUrnDisplay.label>memorial urn</ColumbariumUrnDisplay.label>
+  <ColumbariumUrnDisplay.description>A memorial urn holding a colonist's remains and record. It can be installed, uninstalled, and moved like a sculpture.</ColumbariumUrnDisplay.description>
+  <ColumbariumModularCompactTall.label>columbarium (8 niches, compact)</ColumbariumModularCompactTall.label>
+  <ColumbariumModularCompactTall.description>An eight-niche columbarium on a two-by-one footprint.</ColumbariumModularCompactTall.description>
+  <ColumbariumModularTall.label>columbarium (8 niches)</ColumbariumModularTall.label>
+  <ColumbariumModularTall.description>An eight-niche columbarium on a four-by-two footprint.</ColumbariumModularTall.description>
+</LanguageData>
