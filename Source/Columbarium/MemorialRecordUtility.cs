@@ -19,6 +19,7 @@ namespace Columbarium
             record.FlowerIndex = FlowerCatalog.ForPawn(pawn);
             record.PersonName = pawn.Name?.ToStringFull ?? pawn.LabelCap;
             Pawn_AgeTracker age = pawn.ageTracker;
+            record.AgeBiologicalYears = age.AgeBiologicalYears;
             record.BirthYear = age.BirthYear;
             record.BirthQuadrum = (int)age.BirthQuadrum;
             record.BirthDayOfSeasonZeroBased = age.BirthDayOfSeasonZeroBased;

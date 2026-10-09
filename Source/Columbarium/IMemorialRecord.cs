@@ -3,6 +3,7 @@ namespace Columbarium
     public interface IMemorialRecord
     {
         string PersonName { get; set; }
+        int AgeBiologicalYears { get; set; }
         int BirthYear { get; set; }
         int BirthQuadrum { get; set; }
         int BirthDayOfSeasonZeroBased { get; set; }

@@ -9,6 +9,7 @@ namespace Columbarium
     {
         private static readonly Dictionary<Color, Material> Materials = new Dictionary<Color, Material>();
         public string personName;
+        public int ageBiologicalYears = -1;
         public int birthYear = int.MinValue;
         public int birthQuadrum = -1;
         public int birthDayOfSeasonZeroBased = -1;
@@ -25,6 +26,7 @@ namespace Columbarium
         private bool needsLegacyColorMigration = true;
 
         string IMemorialRecord.PersonName { get => personName; set => personName = value; }
+        int IMemorialRecord.AgeBiologicalYears { get => ageBiologicalYears; set => ageBiologicalYears = value; }
         int IMemorialRecord.BirthYear { get => birthYear; set => birthYear = value; }
         int IMemorialRecord.BirthQuadrum { get => birthQuadrum; set => birthQuadrum = value; }
         int IMemorialRecord.BirthDayOfSeasonZeroBased { get => birthDayOfSeasonZeroBased; set => birthDayOfSeasonZeroBased = value; }
@@ -116,6 +118,7 @@ namespace Columbarium
         {
             base.ExposeData();
             Scribe_Values.Look(ref personName, "personName");
+            Scribe_Values.Look(ref ageBiologicalYears, "ageBiologicalYears", -1);
             Scribe_Values.Look(ref birthYear, "birthYear", int.MinValue);
             Scribe_Values.Look(ref birthQuadrum, "birthQuadrum", -1);
             Scribe_Values.Look(ref birthDayOfSeasonZeroBased, "birthDayOfSeasonZeroBased", -1);

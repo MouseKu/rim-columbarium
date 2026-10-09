@@ -28,8 +28,11 @@ namespace Columbarium
             Widgets.DrawLineHorizontal(0, 38, inRect.width);
 
             Text.Anchor = TextAnchor.MiddleCenter;
+            string name = record.PersonName.NullOrEmpty() ? "Unknown".Translate().ToString() : record.PersonName;
+            if (record.AgeBiologicalYears >= 0)
+                name += " (" + record.AgeBiologicalYears + ")";
             Widgets.Label(new Rect(10, 43, inRect.width - 20, 30),
-                record.PersonName.NullOrEmpty() ? "Unknown".Translate().ToString() : record.PersonName);
+                name);
             Widgets.Label(new Rect(10, 73, inRect.width - 20, 24), DateText(record, birth: true));
             Widgets.Label(new Rect(10, 97, inRect.width - 20, 24), DateText(record, birth: false));
             Text.Anchor = TextAnchor.UpperLeft;
