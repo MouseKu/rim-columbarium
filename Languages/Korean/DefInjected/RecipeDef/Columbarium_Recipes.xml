@@ -6,4 +6,7 @@
   <ColumbariumFillUrn.label>고인을 화장해 유골함에 안치</ColumbariumFillUrn.label>
   <ColumbariumFillUrn.description>고인을 화장하고 납골당에 보관하거나 설치할 수 있는 추모 유골함을 만듭니다.</ColumbariumFillUrn.description>
   <ColumbariumFillUrn.jobString>고인을 화장하는 중</ColumbariumFillUrn.jobString>
+  <ColumbariumFillUrnCampfire.label>모닥불에서 고인을 화장해 유골함에 안치</ColumbariumFillUrnCampfire.label>
+  <ColumbariumFillUrnCampfire.description>모닥불에서 나무 150개와 빈 유골함을 사용해 고인을 화장합니다. 일반적인 작업 속도에서 약 12시간이 걸립니다.</ColumbariumFillUrnCampfire.description>
+  <ColumbariumFillUrnCampfire.jobString>모닥불에서 고인을 화장하는 중</ColumbariumFillUrnCampfire.jobString>
 </LanguageData>

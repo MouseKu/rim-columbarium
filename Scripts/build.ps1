@@ -42,6 +42,22 @@ foreach ($directory in @('About', 'Defs', 'Textures', 'Patches', 'Languages')) {
     Get-ChildItem -LiteralPath $source -Force | Copy-Item -Destination $destination -Recurse -Force
 }
 
+# RimWorld looks for About/Preview.png. Convert the editable JPEG source rather
+# than changing only its extension, so both the game and Workshop can read it.
+$previewSource = Join-Path $root 'About\Preview.jpg'
+if (Test-Path -LiteralPath $previewSource) {
+    Add-Type -AssemblyName System.Drawing
+    $previewDestination = Join-Path $package 'About\Preview.png'
+    $previewImage = [System.Drawing.Image]::FromFile($previewSource)
+    try {
+        $previewImage.Save($previewDestination, [System.Drawing.Imaging.ImageFormat]::Png)
+    }
+    finally {
+        $previewImage.Dispose()
+    }
+    Remove-Item -LiteralPath (Join-Path $package 'About\Preview.jpg') -Force
+}
+
 # Keep removed XML patches out of packages built over an earlier dist directory.
 foreach ($name in @('Columbarium_RoomRole.xml', 'Columbarium_MemorialUrnMarketValue.xml')) {
     $obsoletePatch = Join-Path $package "Patches\$name"

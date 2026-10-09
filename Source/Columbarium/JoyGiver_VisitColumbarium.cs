@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 
@@ -7,29 +7,35 @@ namespace Columbarium
 {
     public class JoyGiver_VisitColumbarium : JoyGiver
     {
-        private static readonly string[] ColumbariumDefs = {
-            "ColumbariumModularCompactTall", "ColumbariumModularTall",
-            "ColumbariumThirtyTwoCompact", "ColumbariumThirtyTwoLarge"
-        };
-
         public override Job TryGiveJob(Pawn pawn)
         {
-            if (pawn.Map == null) return null;
-            List<Thing> candidates = new List<Thing>();
-            foreach (string defName in ColumbariumDefs)
+            Map map = pawn.Map;
+            if (map == null || def.thingDefs == null) return null;
+
+            bool allowedOutside = JoyUtility.EnjoyableOutsideNow(pawn);
+            Building_Columbarium selected = null;
+            float totalWeight = 0f;
+            foreach (ThingDef thingDef in def.thingDefs)
             {
-                ThingDef thingDef = DefDatabase<ThingDef>.GetNamedSilentFail(defName);
-                if (thingDef == null) continue;
-                foreach (Thing thing in pawn.Map.listerThings.ThingsOfDef(thingDef))
+                foreach (Thing thing in map.listerThings.ThingsOfDef(thingDef))
                 {
                     Building_Columbarium columbarium = thing as Building_Columbarium;
-                    if (columbarium == null || !columbarium.HasStoredMemorials || columbarium.IsForbidden(pawn)) continue;
-                    if (pawn.CanReserveAndReach(columbarium, PathEndMode.Touch, Danger.Some))
-                        candidates.Add(columbarium);
+                    if (columbarium == null || columbarium.Faction != Faction.OfPlayer ||
+                        columbarium.Fogged() ||
+                        !FactionUtility.IsPoliticallyProper(columbarium, pawn) ||
+                        columbarium.IsForbidden(pawn) ||
+                        VacuumUtility.VacuumConcernTo(columbarium, pawn) ||
+                        !pawn.CanReserve(columbarium) ||
+                        !columbarium.TryFindFrontVisitCell(pawn, allowedOutside, out IntVec3 _))
+                        continue;
+
+                    // Match vanilla's preference for nearby graves without allocating a candidate list.
+                    float weight = Mathf.Max(150f - (columbarium.Position - pawn.Position).LengthHorizontal, 5f);
+                    totalWeight += weight;
+                    if (Rand.Chance(weight / totalWeight)) selected = columbarium;
                 }
             }
-            if (candidates.Count == 0) return null;
-            return JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("ColumbariumVisitMemorial"), candidates.RandomElement());
+            return selected == null ? null : JobMaker.MakeJob(def.jobDef, selected);
         }
     }
 }

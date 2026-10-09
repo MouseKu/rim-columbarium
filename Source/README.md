@@ -11,6 +11,8 @@ Run `scripts/build.ps1` from the repository root after changing C# or XML.
 2. `ColumbariumFillUrn` consumes that urn and a corpse at an electric crematorium.
    `RecipeWorker_FillUrn.cs` transfers the urn's color and value and records the
    deceased on the resulting `Building_MemorialUrnDisplay`.
+   `ColumbariumFillUrnCampfire` uses the same worker and product at a vanilla
+   campfire, adding 150 wood and about 30,000 ticks of work at normal labor speed.
 3. `MemorialRecordUtility.cs` reads the corpse. `FlowerCatalog.cs` chooses the
    flower from the pawn's strongest skill. `Dialog_Memorial.cs` displays the record.
 4. The player uninstalls the display urn before storing it. The **Store urn**
@@ -20,8 +22,10 @@ Run `scripts/build.ps1` from the repository root after changing C# or XML.
    methods save the urns and return them when removed or the building is destroyed.
 
 `JoyGiver_VisitColumbarium.cs` selects a columbarium with stored memorials.
-`JobDriver_VisitColumbarium.cs` inherits the vanilla joy visit path and wait toils,
-then applies the vanilla grave room joy factor to the columbarium target.
+`Building_Columbarium.Visit.cs` finds a reachable cell below horizontal
+buildings or on either side of vertical buildings.
+`JobDriver_VisitColumbarium.cs` uses the vanilla joy visit base class, waits at
+that front cell facing the building, and applies the vanilla grave room joy factor.
 
 ## Where to change behavior
 
@@ -33,11 +37,12 @@ then applies the vanilla grave room joy factor to the columbarium target.
 | Change niche fill order or drawing | `Building_Columbarium.cs` |
 | Change flower selection | `FlowerCatalog.cs` |
 | Change flower placement | `NicheFlowerLayout.cs`, `CompactNicheFlowerLayout.cs`, `ThirtyTwoLayout.cs`, `CompactThirtyTwoFlowerLayout.cs` |
-| Change construction rotation or memorial visits | `Designator_BuildColumbarium.cs`, `JoyGiver_VisitColumbarium.cs`, `JobDriver_VisitColumbarium.cs` |
+| Change construction rotation or memorial visits | `Designator_BuildColumbarium.cs`, `Building_Columbarium.Visit.cs`, `JoyGiver_VisitColumbarium.cs`, `JobDriver_VisitColumbarium.cs` |
 | Change urn pricing or Tomb room score | `StatPart_MemorialUrnMarketValue.cs`, `MemorialUrnMarketValueRegistration.cs`, `TombRoomRoleHarmonyPatch.cs` |
 
-`Building_Columbarium` is split across two partial files: the main file handles
-drawing, and `.Storage.cs` handles saved contents and player commands. The art
+`Building_Columbarium` is split across three partial files: the main file handles
+drawing, `.Storage.cs` handles saved contents and player commands, and `.Visit.cs`
+chooses a front-facing visit position. The art
 scripts in `scripts/` read niche coordinates directly from the main file, so
 keep `TallNicheBounds` there unless those scripts are updated too. The four
 layout files contain measured art coordinates; use the corresponding fitting

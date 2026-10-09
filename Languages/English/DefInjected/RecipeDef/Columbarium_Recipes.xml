@@ -6,4 +6,7 @@
   <ColumbariumFillUrn.label>cremate colonist into urn</ColumbariumFillUrn.label>
   <ColumbariumFillUrn.description>Cremate a colonist and produce an installable memorial urn that can also be stored in a columbarium.</ColumbariumFillUrn.description>
   <ColumbariumFillUrn.jobString>Cremating a colonist.</ColumbariumFillUrn.jobString>
+  <ColumbariumFillUrnCampfire.label>cremate colonist into urn at campfire</ColumbariumFillUrnCampfire.label>
+  <ColumbariumFillUrnCampfire.description>Cremate a colonist at a campfire using 150 wood and an empty urn. This takes about 12 hours at normal labor speed.</ColumbariumFillUrnCampfire.description>
+  <ColumbariumFillUrnCampfire.jobString>Cremating a colonist.</ColumbariumFillUrnCampfire.jobString>
 </LanguageData>

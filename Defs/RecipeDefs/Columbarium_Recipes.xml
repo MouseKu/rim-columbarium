@@ -128,4 +128,70 @@
       <li>ElectricCrematorium</li>
     </recipeUsers>
   </RecipeDef>
+  <RecipeDef>
+    <defName>ColumbariumFillUrnCampfire</defName>
+    <workerClass>Columbarium.RecipeWorker_FillUrn</workerClass>
+    <label>cremate colonist into urn at campfire</label>
+    <description>Cremate a colonist at a campfire using 150 wood and an empty urn. This takes about 12 hours at normal labor speed.</description>
+    <jobString>Cremating a colonist.</jobString>
+    <!-- A campfire has WorkTableWorkSpeedFactor 0.5, so 15,000 work takes about 30,000 ticks at normal labor speed. -->
+    <workAmount>15000</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <autoStripCorpses>false</autoStripCorpses>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ColumbariumEmptyUrn</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ColumbariumEmptyUrn</li>
+        <li>WoodLog</li>
+      </thingDefs>
+      <categories>
+        <li>CorpsesHumanlike</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>ColumbariumEmptyUrn</li>
+        <li>WoodLog</li>
+      </thingDefs>
+      <categories>
+        <li>CorpsesHumanlike</li>
+      </categories>
+      <specialFiltersToAllow>
+        <li>AllowCorpsesColonist</li>
+      </specialFiltersToAllow>
+    </defaultIngredientFilter>
+    <products>
+      <ColumbariumUrnDisplay>1</ColumbariumUrnDisplay>
+    </products>
+    <recipeUsers>
+      <li>Campfire</li>
+    </recipeUsers>
+  </RecipeDef>
 </Defs>

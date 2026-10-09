@@ -11,6 +11,7 @@ Run commands from the repository root. Python image scripts require Pillow; flow
 ```
 
 The compiled DLL is `dist/Columbarium/Assemblies/Columbarium.dll`.
+If `About/Preview.jpg` exists, the build converts it to `dist/Columbarium/About/Preview.png` for the mod preview and Workshop thumbnail.
 
 ## Recalculate flower placement
 
@@ -39,6 +40,7 @@ python scripts/fit_niche_flowers.py --keep-sizes
 | `preview_standard_flowers.py` | Shows each flower on the standard 8-niche building. | `Preview/StandardFlowers/`, `Preview/standard_flowers_all.png` |
 | `preview_compact_flowers_all.py` | Shows each flower on the compact 8-niche building. | `Preview/CompactFlowers/`, `Preview/compact_flowers_all.png` |
 | `preview_compact_thirtytwo_flowers.py` | Shows each flower on the compact 32-niche building, along with empty, partly filled, and full views. | `Preview/CompactThirtyTwoFlowers/`, `Preview/compact_thirtytwo_flowers_all.png`, `Preview/thirtytwo_compact_*.png` |
+| `preview_half_full_columbaria.py` | Renders transparent south-facing 8- and 32-niche buildings with half their niches occupied and varied flowers. | `Preview/half_full_*.png` |
 | `preview_thirtytwo_orientations.py` | Compares the 32-niche front and side artwork with the building footprints. | `Preview/thirtytwo_orientations_*.png` |
 
 Preview scripts read the current files in `Textures/Things/`, `Defs/`, and `Source/`. They do not modify the game DLL.
