@@ -11,7 +11,7 @@
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(4.05191884,3.01037395)</drawSize>
     </graphicData>
-    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
     <drawerType>RealtimeOnly</drawerType>
     <size>(4,2)</size>
     <defaultPlacingRot>South</defaultPlacingRot>
@@ -50,7 +50,7 @@
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(8.16554203,5.98881435)</drawSize>
     </graphicData>
-    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
     <drawerType>RealtimeOnly</drawerType>
     <size>(8,4)</size>
     <defaultPlacingRot>South</defaultPlacingRot>

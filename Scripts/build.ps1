@@ -59,7 +59,7 @@ if (Test-Path -LiteralPath $previewSource) {
 }
 
 # Keep removed XML patches out of packages built over an earlier dist directory.
-foreach ($name in @('Columbarium_RoomRole.xml', 'Columbarium_MemorialUrnMarketValue.xml')) {
+foreach ($name in @('Columbarium_RoomRole.xml', 'Columbarium_MemorialUrnMarketValue.xml', 'Columbarium_TwoAxisDesignators.xml')) {
     $obsoletePatch = Join-Path $package "Patches\$name"
     if (Test-Path -LiteralPath $obsoletePatch) {
         Remove-Item -LiteralPath $obsoletePatch -Force

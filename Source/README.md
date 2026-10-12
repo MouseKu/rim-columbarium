@@ -37,7 +37,7 @@ that front cell facing the building, and applies the vanilla grave room joy fact
 | Change niche fill order or drawing | `Building_Columbarium.cs` |
 | Change flower selection | `FlowerCatalog.cs` |
 | Change flower placement | `NicheFlowerLayout.cs`, `CompactNicheFlowerLayout.cs`, `ThirtyTwoLayout.cs`, `CompactThirtyTwoFlowerLayout.cs` |
-| Change construction rotation or memorial visits | `Designator_BuildColumbarium.cs`, `Building_Columbarium.Visit.cs`, `JoyGiver_VisitColumbarium.cs`, `JobDriver_VisitColumbarium.cs` |
+| Change construction graphics or memorial visits | `Building_Columbarium.cs`, `Building_Columbarium.Visit.cs`, `JoyGiver_VisitColumbarium.cs`, `JobDriver_VisitColumbarium.cs` |
 | Change urn pricing or Tomb room score | `StatPart_MemorialUrnMarketValue.cs`, `MemorialUrnMarketValueRegistration.cs`, `TombRoomRoleHarmonyPatch.cs` |
 
 `Building_Columbarium` is split across three partial files: the main file handles

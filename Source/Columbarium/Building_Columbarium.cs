@@ -54,15 +54,16 @@ namespace Columbarium
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             bool tallArt = IsEightNicheArt;
+            bool frontArt = Rotation == Rot4.South || Rotation == Rot4.North;
             // The front artwork extends north of the building footprint.
-            if (tallArt && Rotation == Rot4.South)
+            if (tallArt && frontArt)
                 drawLoc.z += CompactEightNicheArt ? CompactNorthOffset : LargeNorthOffset;
-            if (IsThirtyTwoNicheArt && Rotation == Rot4.South)
+            if (IsThirtyTwoNicheArt && frontArt)
                 drawLoc.z += def.defName == "ColumbariumThirtyTwoCompact" ?
                     ThirtyTwoLayout.CompactNorthOffset : ThirtyTwoLayout.LargeNorthOffset;
             base.DrawAt(drawLoc, flip);
-            // The niches are on the front face, visible only from the south.
-            if (Rotation != Rot4.South) return;
+            // North and south use the same front artwork and niche positions.
+            if (!frontArt) return;
             if (IsThirtyTwoNicheArt)
             {
                 DrawThirtyTwoNiches(drawLoc);

@@ -68,7 +68,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>ColumbariumModularCompactTall</defName>
-    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
     <label>columbarium (8 niches, compact)</label>
     <description>An eight-niche columbarium on a two-by-one footprint.</description>
     <thingClass>Columbarium.Building_Columbarium</thingClass>
@@ -107,7 +107,7 @@
   </ThingDef>
   <ThingDef ParentName="BuildingBase">
     <defName>ColumbariumModularTall</defName>
-    <canGenerateDefaultDesignator>false</canGenerateDefaultDesignator>
+    <canGenerateDefaultDesignator>true</canGenerateDefaultDesignator>
     <label>columbarium (8 niches)</label>
     <description>An eight-niche columbarium on a four-by-two footprint.</description>
     <thingClass>Columbarium.Building_Columbarium</thingClass>
