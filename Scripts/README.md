@@ -1,16 +1,17 @@
 # Script guide
 
-Run commands from the repository root. Python image scripts require Pillow; flower-fitting scripts also require NumPy. Building the mod requires the .NET SDK and a RimWorld 1.6 installation for assembly references. NuGet restores the compile-only `Lib.Harmony.Ref` package; the installed [Harmony mod](https://github.com/pardeike/HarmonyRimWorld) supplies Harmony at game runtime.
+Run commands from the repository root. Python image scripts require Pillow; flower-fitting scripts also require NumPy. Building the mod requires the .NET 10 SDK and a RimWorld 1.7 installation for assembly references. NuGet restores the compile-only `Lib.Harmony.Ref` package; the installed [Harmony mod](https://github.com/pardeike/HarmonyRimWorld) supplies Harmony at game runtime.
 
 ## Build the mod
 
-`build.ps1` compiles the C# project and copies the mod files into `dist/Columbarium/`. Pass the RimWorld installation path if the script cannot find it automatically:
+`build.ps1` checks the installed game's `Version.txt`, verifies the preserved 1.6 DLL against `Compatibility/1.6/Columbarium.sha256`, compiles against the installed 1.7 `Assembly-CSharp.dll`, `UnityStubs.dll`, and `Waylith.dll`, and copies the mod files into `dist/Columbarium/`. It verifies both packaged DLLs and their copies in the ZIP. Pass the RimWorld installation path if the script cannot find it automatically:
 
 ```powershell
 .\scripts\build.ps1 -RimWorldPath 'D:\SteamLibrary\steamapps\common\RimWorld'
 ```
 
-The compiled DLL is `dist/Columbarium/Assemblies/Columbarium.dll`.
+The new DLL is `dist/Columbarium/1.7/Assemblies/Columbarium.dll`; the unchanged 1.6 DLL is `dist/Columbarium/1.6/Assemblies/Columbarium.dll`. `LoadFolders.xml` loads only the matching DLL. The obsolete repository root `Assemblies/Columbarium.dll` has been removed; use the packaged mod folder for installation.
+The build also creates `dist/Columbarium-1.6-1.7.zip`. The older `dist/ColumbariumV1.0.2.zip` is a legacy 1.6 archive.
 If `About/Preview.jpg` exists, the build converts it to `dist/Columbarium/About/Preview.png` for the mod preview and Workshop thumbnail.
 
 ## Recalculate flower placement

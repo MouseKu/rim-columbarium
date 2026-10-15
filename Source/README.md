@@ -1,8 +1,10 @@
 # Code guide
 
-The C# project is `Columbarium/Columbarium.csproj`. RimWorld loads the compiled
-`Assemblies/Columbarium.dll`; XML in `Defs/` selects the classes used at runtime.
-Run `scripts/build.ps1` from the repository root after changing C# or XML.
+The C# project is `Columbarium/Columbarium.csproj`. `LoadFolders.xml` selects
+`1.6/Assemblies/Columbarium.dll` or `1.7/Assemblies/Columbarium.dll` from the
+package. The 1.6 DLL is preserved in `Compatibility/1.6/Assemblies/` and is
+never rebuilt. XML in `Defs/` selects the classes used at runtime. Run
+`Scripts/build.ps1` from the repository root after changing C# or XML.
 
 ## Runtime flow
 

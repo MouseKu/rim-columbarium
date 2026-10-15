@@ -1,5 +1,6 @@
 # scripts/build.ps1 creates the installable package here.
 /dist/
+/build/
 
 # .NET build and IDE intermediates.
 bin/
@@ -9,7 +10,7 @@ obj/
 *.suo
 Preview/
 
-# Keep the prebuilt Assemblies/Columbarium.dll; omit its debug symbols.
+# Versioned DLLs live in Compatibility/ and the generated dist/ package.
 /Assemblies/*.pdb
 
 # Python caches from scripts/.

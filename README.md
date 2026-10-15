@@ -1,4 +1,4 @@
-# Columbarium for RimWorld 1.6
+# Columbarium for RimWorld 1.6 and 1.7
 
 ## 1. Introduction
 
@@ -42,6 +42,6 @@
 
 - AI tools were used during development.
 
-- This mod has passed short-term testing. Long-term save testing and compatibility testing with other mods are ongoing. It has also been tested alongside more than 200 mods, but please report any bugs you find.
+- The 1.6 version passed short-term testing, including use alongside more than 200 mods. The 1.7 version has been built against RimWorld 1.7, but has not yet been tested in-game. Long-term save and mod compatibility testing remain open; please report any bugs you find.
 
 - In terms of balance, a columbarium costs twice as much as a vanilla sarcophagus, but it holds far more people and uses resources more efficiently. Then again, should remembrance really be measured by efficiency?
