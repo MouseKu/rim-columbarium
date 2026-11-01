@@ -10,7 +10,7 @@ from niche_art import COMPACT_FRAME_SIZE, COMPACT_PLAQUE, COMPACT_INSCRIPTION
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ('Melee', 'Shooting', 'Construction', 'Mining', 'Cooking', 'Plants',
-         'Animals', 'Crafting', 'Artistic', 'Medicine', 'Social', 'Intellectual')
+         'Animals', 'Crafting', 'Artistic', 'Medicine', 'Social', 'Intellectual', 'Pet')
 PLAQUE_LIMIT = .50
 INSCRIPTION_LIMIT = .50
 RIGHT_SPILL = .20  # fraction of one niche width beyond its right frame

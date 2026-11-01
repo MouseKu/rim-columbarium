@@ -15,7 +15,7 @@ from niche_art import FRAME_SIZE, PLAQUE, INSCRIPTION
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ('Melee', 'Shooting', 'Construction', 'Mining', 'Cooking', 'Plants',
-         'Animals', 'Crafting', 'Artistic', 'Medicine', 'Social', 'Intellectual')
+         'Animals', 'Crafting', 'Artistic', 'Medicine', 'Social', 'Intellectual', 'Pet')
 MARGIN = .025  # relative to door height; measured from the visible right edge
 PLAQUE_LIMIT = .333
 INSCRIPTION_LIMIT = .333

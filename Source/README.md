@@ -1,9 +1,10 @@
 # Code guide
 
-The C# project is `Columbarium/Columbarium.csproj`. `LoadFolders.xml` selects
+The 1.7 C# project is `Columbarium/Columbarium.csproj`; the 1.6 project is
+`Columbarium/Columbarium.1.6.csproj`. `LoadFolders.xml` selects
 `1.6/Assemblies/Columbarium.dll` or `1.7/Assemblies/Columbarium.dll` from the
-package. The 1.6 DLL is preserved in `Compatibility/1.6/Assemblies/` and is
-never rebuilt. XML in `Defs/` selects the classes used at runtime. Run
+package. A 1.6 build updates `Compatibility/1.6/Assemblies/` and its hash
+record. XML in `Defs/` selects the classes used at runtime. Run
 `Scripts/build.ps1` from the repository root after changing C# or XML.
 
 ## Runtime flow
@@ -16,7 +17,9 @@ never rebuilt. XML in `Defs/` selects the classes used at runtime. Run
    `ColumbariumFillUrnCampfire` uses the same worker and product at a vanilla
    campfire, adding 150 wood and about 30,000 ticks of work at normal labor speed.
 3. `MemorialRecordUtility.cs` reads the corpse. `FlowerCatalog.cs` chooses the
-   flower from the pawn's strongest skill. `Dialog_Memorial.cs` displays the record.
+   flower from a human pawn's strongest skill or the pet flower for an animal.
+   `Dialog_Memorial.cs` displays the record. Animal cremation has separate recipes
+   at the crematorium and campfire and uses the same urn product.
 4. The player uninstalls the display urn before storing it. The **Store urn**
    command in `Building_Columbarium.Storage.cs` starts `JobDriver_StoreUrn.cs`,
    which carries the minified urn into the building's `ThingOwner`.

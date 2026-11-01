@@ -43,8 +43,8 @@ namespace Columbarium
             new Rect(1316f, 628f, 173f, 113f),
             new Rect(1523f, 628f, 175f, 113f)
         };
-        private static readonly float[] FlowerRatios = { 0.916f, 0.602f, 0.622f, 0.573f, 0.583f, 0.651f, 0.573f, 0.573f, 0.563f, 0.593f, 0.583f, 0.612f };
-        private static readonly float[] RightPaddings = { 0.20312500f, 0.09375000f, 0.06250000f, 0.03125000f, 0.04687500f, 0.10937500f, 0.04687500f, 0.03125000f, 0.03125000f, 0.04687500f, 0.03125000f, 0.07812500f };
+        private static readonly float[] FlowerRatios = { 0.916f, 0.602f, 0.622f, 0.573f, 0.583f, 0.651f, 0.573f, 0.573f, 0.563f, 0.593f, 0.583f, 0.612f, 0.630f };
+        private static readonly float[] RightPaddings = { 0.20312500f, 0.09375000f, 0.06250000f, 0.03125000f, 0.04687500f, 0.10937500f, 0.04687500f, 0.03125000f, 0.03125000f, 0.04687500f, 0.03125000f, 0.07812500f, 0.07812500f };
         private static int ValidIndex(int index) => index >= 0 && index < FlowerRatios.Length ? index : FlowerCatalog.DefaultIndex;
         public static float FlowerRatio(int index) => FlowerRatios[ValidIndex(index)];
         public static float RightPadding(int index) => RightPaddings[ValidIndex(index)];

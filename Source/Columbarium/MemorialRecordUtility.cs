@@ -16,7 +16,7 @@ namespace Columbarium
             Pawn pawn = corpse?.InnerPawn;
             if (record == null || pawn?.ageTracker == null) return;
 
-            record.FlowerIndex = FlowerCatalog.ForPawn(pawn);
+            record.FlowerIndex = pawn.RaceProps.Animal ? FlowerCatalog.PetIndex : FlowerCatalog.ForPawn(pawn);
             record.PersonName = pawn.Name?.ToStringFull ?? pawn.LabelCap;
             Pawn_AgeTracker age = pawn.ageTracker;
             record.AgeBiologicalYears = age.AgeBiologicalYears;

@@ -5,8 +5,8 @@ namespace Columbarium
     {
         public const float MarginRatio = .025f;
         public const float RightSpillRatio = 0.20f;
-        private static readonly float[] Ratios = { 1.150f, 0.895f, 0.815f, 0.765f, 0.765f, 0.905f, 0.755f, 0.750f, 0.720f, 0.775f, 0.750f, 0.795f };
-        private static readonly float[] RightPaddings = { 0.20312500f, 0.09375000f, 0.06250000f, 0.03125000f, 0.04687500f, 0.10937500f, 0.04687500f, 0.03125000f, 0.03125000f, 0.04687500f, 0.03125000f, 0.07812500f };
+        private static readonly float[] Ratios = { 1.150f, 0.895f, 0.815f, 0.765f, 0.765f, 0.905f, 0.755f, 0.750f, 0.720f, 0.775f, 0.750f, 0.795f, 0.835f };
+        private static readonly float[] RightPaddings = { 0.20312500f, 0.09375000f, 0.06250000f, 0.03125000f, 0.04687500f, 0.10937500f, 0.04687500f, 0.03125000f, 0.03125000f, 0.04687500f, 0.03125000f, 0.07812500f, 0.07812500f };
         public static float RightPadding(int index)
         {
             if (index < 0 || index >= RightPaddings.Length) index = FlowerCatalog.DefaultIndex;

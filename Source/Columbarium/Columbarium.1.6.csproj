@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>Columbarium</AssemblyName>
+    <OutputPath>../../build/1.6/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="*.cs" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.3.6" PrivateAssets="all" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldPath)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="$(RimWorldPath)/UnityEngine*.dll"><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

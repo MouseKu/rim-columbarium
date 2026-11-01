@@ -18,12 +18,13 @@ namespace Columbarium
         private static readonly string[] Flowers =
         {
             "Melee", "Shooting", "Construction", "Mining", "Cooking", "Plants",
-            "Animals", "Crafting", "Artistic", "Medicine", "Social", "Intellectual"
+            "Animals", "Crafting", "Artistic", "Medicine", "Social", "Intellectual", "Pet"
         };
 
         private static readonly Dictionary<string, int> SkillIndices = BuildSkillIndices();
         private static readonly Material[] CachedMaterials = new Material[Flowers.Length];
         public const int DefaultIndex = 9; // White lily for legacy records without a skill snapshot.
+        public const int PetIndex = 12;
 
         private static Dictionary<string, int> BuildSkillIndices()
         {
@@ -72,7 +73,13 @@ namespace Columbarium
         public static string FlowerName(int index)
         {
             if (index < 0 || index >= Flowers.Length) index = DefaultIndex;
-            return ("Columbarium_Flower_" + Skills[index]).Translate();
+            return ("Columbarium_Flower_" + Flowers[index]).Translate();
+        }
+
+        public static string MemorialFlowerText(int index)
+        {
+            if (index == PetIndex) return "Columbarium_MemorialFlowerPet".Translate();
+            return "Columbarium_MemorialFlower".Translate(FlowerName(index), SkillName(index));
         }
 
         public static void DrawAt(Vector3 urnCenter, float urnSize, int index)

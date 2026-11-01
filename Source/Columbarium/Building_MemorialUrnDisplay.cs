@@ -85,7 +85,7 @@ namespace Columbarium
         {
             string text = base.GetInspectString();
             return text + (text.NullOrEmpty() ? "" : "\n") + "Columbarium_RemainsOf".Translate(personName.NullOrEmpty() ? "Unknown".Translate().ToString() : personName)
-                + "\n" + "Columbarium_MemorialFlower".Translate(FlowerCatalog.FlowerName(flowerIndex), FlowerCatalog.SkillName(flowerIndex));
+                + "\n" + FlowerCatalog.MemorialFlowerText(flowerIndex);
         }
 
         protected override void DrawAt(Vector3 drawLoc, bool flip = false)

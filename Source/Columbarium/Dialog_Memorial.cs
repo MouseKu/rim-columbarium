@@ -73,8 +73,7 @@ namespace Columbarium
             Widgets.DrawLineHorizontal(0, 340, inRect.width);
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(new Rect(10, 350, inRect.width - 20, 28),
-                "Columbarium_MemorialFlower".Translate(FlowerCatalog.FlowerName(record.FlowerIndex),
-                    FlowerCatalog.SkillName(record.FlowerIndex)));
+                FlowerCatalog.MemorialFlowerText(record.FlowerIndex));
             Text.Anchor = TextAnchor.UpperLeft;
         }
 

@@ -9,6 +9,7 @@
   <Columbarium_Finish>Finish</Columbarium_Finish>
   <Columbarium_Cancel>Cancel</Columbarium_Cancel>
   <Columbarium_MemorialFlower>Memorial flower: {0} ({1})</Columbarium_MemorialFlower>
+  <Columbarium_MemorialFlowerPet>Memorial flower: White anemone</Columbarium_MemorialFlowerPet>
   <Columbarium_UnknownDate>????, quadrum ?, day ?</Columbarium_UnknownDate>
   <Columbarium_Died>Died: {0}</Columbarium_Died>
   <Columbarium_StoreUrn>Store urn</Columbarium_StoreUrn>
@@ -31,4 +32,5 @@
   <Columbarium_Flower_Medicine>Lily</Columbarium_Flower_Medicine>
   <Columbarium_Flower_Social>Rose</Columbarium_Flower_Social>
   <Columbarium_Flower_Intellectual>Iris</Columbarium_Flower_Intellectual>
+  <Columbarium_Flower_Pet>White anemone</Columbarium_Flower_Pet>
 </LanguageData>
